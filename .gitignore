@@ -105,8 +105,6 @@ venv.bak/
 
 .idea/
 
-*.db
-
 *.fb2
 
 *.html
