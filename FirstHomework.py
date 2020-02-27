@@ -1,4 +1,3 @@
-
 def first_task():
     n = int(input("Enter value to first task"))
     counter = 0
@@ -45,17 +44,17 @@ def third_task():
         tmp_lst.clear()
         for j in range(len(mx[i])):
             if i > 0:
-                up = mx[i-1][j]
+                up = mx[i - 1][j]
             else:
                 up = mx[len(mx) - 1][j]
 
             if i < len(mx) - 1:
-                down = mx[i+1][j]
+                down = mx[i + 1][j]
             else:
                 down = mx[0][j]
 
             if j > 0:
-                left = mx[i][j-1]
+                left = mx[i][j - 1]
             else:
                 left = mx[i][len(mx[i]) - 1]
 
@@ -66,6 +65,7 @@ def third_task():
             tmp_lst.append(up + down + left + right)
         new_mx.append(tmp_lst.copy())
     print(new_mx)
+
 
 def fourth_task():
     n = int(input("Enter value to fourth task"))
@@ -81,7 +81,7 @@ def fourth_task():
             tmp.append(0)
         res_mx.append(tmp.copy())
 
-    l = int(n/2)
+    l = int(n / 2)
     counter = 0
     for turns in range(l):
         for row in range(0 + turns, n - turns, 1):
@@ -97,7 +97,7 @@ def fourth_task():
             counter = counter + 1
             res_mx[col_l][turns] = counter
     if n % 2 == 1:
-        res_mx[l][l] = n**2
+        res_mx[l][l] = n ** 2
 
     for i in range(len(res_mx)):
         print(res_mx[i], "\n")
